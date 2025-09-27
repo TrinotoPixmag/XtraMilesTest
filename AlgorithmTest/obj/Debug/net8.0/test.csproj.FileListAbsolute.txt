@@ -1,0 +1,14 @@
+/Users/trinoto/Documents/Project/TestXtramile/test/bin/Debug/net8.0/test
+/Users/trinoto/Documents/Project/TestXtramile/test/bin/Debug/net8.0/test.deps.json
+/Users/trinoto/Documents/Project/TestXtramile/test/bin/Debug/net8.0/test.runtimeconfig.json
+/Users/trinoto/Documents/Project/TestXtramile/test/bin/Debug/net8.0/test.dll
+/Users/trinoto/Documents/Project/TestXtramile/test/bin/Debug/net8.0/test.pdb
+/Users/trinoto/Documents/Project/TestXtramile/test/obj/Debug/net8.0/test.GeneratedMSBuildEditorConfig.editorconfig
+/Users/trinoto/Documents/Project/TestXtramile/test/obj/Debug/net8.0/test.AssemblyInfoInputs.cache
+/Users/trinoto/Documents/Project/TestXtramile/test/obj/Debug/net8.0/test.AssemblyInfo.cs
+/Users/trinoto/Documents/Project/TestXtramile/test/obj/Debug/net8.0/test.csproj.CoreCompileInputs.cache
+/Users/trinoto/Documents/Project/TestXtramile/test/obj/Debug/net8.0/test.dll
+/Users/trinoto/Documents/Project/TestXtramile/test/obj/Debug/net8.0/refint/test.dll
+/Users/trinoto/Documents/Project/TestXtramile/test/obj/Debug/net8.0/test.pdb
+/Users/trinoto/Documents/Project/TestXtramile/test/obj/Debug/net8.0/test.genruntimeconfig.cache
+/Users/trinoto/Documents/Project/TestXtramile/test/obj/Debug/net8.0/ref/test.dll
