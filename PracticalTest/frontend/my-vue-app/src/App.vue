@@ -16,7 +16,7 @@
       <label class="block mb-2 font-semibold">Select City:</label>
       <select
         v-model="selectedCity"
-        @change="getWeather"
+        @change="getWeatherMethod"
         class="border border-gray-300 rounded-lg p-2 w-full mb-4 focus:ring-2 focus:ring-blue-400 disabled:bg-gray-100"
         :disabled="!selectedCountry"
       >
@@ -30,7 +30,7 @@
 
       <div v-if="weather && !loading" class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-xl shadow">
         <div class="bg-gradient-to-br from-blue-200 to-blue-400 p-6 rounded-2xl shadow-lg text-gray-800 w-full max-w-md">
-          <div class="flex items-center justify-between">
+          <div class="items-center justify-between">
             <h2 class="text-2xl font-bold">
               {{ weather.city }}, {{ weather.country }}
             </h2>
@@ -82,6 +82,7 @@
 import { SunIcon, CloudIcon, CloudRainIcon, WindIcon, DropletIcon, EyeIcon, GaugeIcon, ThermometerIcon } from "lucide-vue-next";
 import { ref, onMounted } from "vue";
 import axios from "axios";
+import { getCountries, getCities, getWeather } from "./api";
 
 const countries = ref([]);
 const selectedCountry = ref("");
@@ -92,7 +93,7 @@ const loading = ref(false);
 
 const fetchCountries = async () => {
   try {
-    const res = await axios.get("http://localhost:5201/api/countries");
+    const res = await getCountries();
     countries.value = res.data;
   } catch (err) {
     console.error("Failed to load countries", err);
@@ -101,7 +102,7 @@ const fetchCountries = async () => {
 
 const fetchCities = async () => {
   try {
-    const res = await axios.get(`http://localhost:5201/api/countries/${selectedCountry.value}/cities`);
+    const res = await getCities(selectedCountry.value);
     cities.value = res.data;
   } catch (err) {
     console.error("Failed to load city", err);
@@ -112,13 +113,11 @@ function loadCities(countryId) {
   fetchCities(countryId);
 }
 
-async function getWeather() {
+async function getWeatherMethod() {
   if (!selectedCity.value) return;
   loading.value = true;
   try {
-    const res = await axios.get(
-      `http://localhost:5201/api/weather/${selectedCity.value}`
-    );
+    const res = await getWeather(selectedCity.value);
     weather.value = res.data;
   } catch (error) {
     alert("Failed to fetch weather data");

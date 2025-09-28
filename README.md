@@ -23,3 +23,7 @@ this design?
  - Optionally, I’d add a cache layer (like Redis) for very common prefixes so the DB isn’t hit every time someone types “Jo” or “Ma.”.
 
  In best practice if we focus with performance, I’d keep SQL Server as the source of truth but sync patient names into Elasticsearch, either with a cron job or real-time CDC. That way, autocomplete queries go straight to Elasticsearch, which is optimized for prefix search and responds in just a few milliseconds. SQL Server handles transactions, Elasticsearch handles fast search — so we stay well under 100 ms. 
+
+ # Practical Test
+ its deployed at GCP Compute Engine. with link below.
+ [weather-app](https://weather-app.devinfosekitar.my.id/)
