@@ -42,5 +42,5 @@ public class WeatherService : IWeatherService
             Pressure = response.Main.Pressure
         };
     }
-    private static double FahrenheitToCelsius(double f) => Math.Round((f - 32) * 5.0 / 9.0, 2);
+    public static double FahrenheitToCelsius(double f) => Math.Round((f - 32) * 5.0 / 9.0, 2);
 }

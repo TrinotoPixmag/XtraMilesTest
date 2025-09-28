@@ -20,15 +20,18 @@ public class WeatherController : ControllerBase
         try
         {
             var weather = await _weatherService.GetWeatherAsync(cityName);
+            if (weather == null)
+                return NotFound();
+
             return Ok(weather);
         }
         catch (HttpRequestException ex)
         {
-            return StatusCode(502, new { error = ex.Message });
+            return StatusCode(502, ex.Message);
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            return StatusCode(500, new { error = ex.Message });
+            return StatusCode(500);
         }
     }
 }
