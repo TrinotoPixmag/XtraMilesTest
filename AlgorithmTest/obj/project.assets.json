@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/trinoto/Documents/Project/TestXtramile/test/test.csproj",
+      "projectUniqueName": "/Users/trinoto/Documents/Project/TestXtramile/AlgorithmTest/test.csproj",
       "projectName": "test",
-      "projectPath": "/Users/trinoto/Documents/Project/TestXtramile/test/test.csproj",
+      "projectPath": "/Users/trinoto/Documents/Project/TestXtramile/AlgorithmTest/test.csproj",
       "packagesPath": "/Users/trinoto/.nuget/packages/",
-      "outputPath": "/Users/trinoto/Documents/Project/TestXtramile/test/obj/",
+      "outputPath": "/Users/trinoto/Documents/Project/TestXtramile/AlgorithmTest/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/trinoto/.nuget/NuGet/NuGet.Config"
